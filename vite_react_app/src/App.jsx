@@ -1,20 +1,9 @@
-import { Button } from "@mui/material";
+import AutoCompleteExample from "./AutoCompleteEcample";
 
 function App() {
   return (
     <div className="App">
-      <Button sx={{ typography: "blueTextClass" }} variant="contained">
-        My Button
-      </Button>
-      <Button
-        sx={{
-          bgcolor: "secondary.main",
-          boxShadow: (theme) => theme.shadows[5],
-        }}
-        variant="contained"
-      >
-        My Button
-      </Button>
+      <AutoCompleteExample></AutoCompleteExample>
     </div>
   );
 }
