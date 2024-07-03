@@ -1,9 +1,9 @@
-import AutoCompleteExample from "./AutoCompleteEcample";
+import { Button } from "@mui/material";
 
 function App() {
   return (
     <div className="App">
-      <AutoCompleteExample></AutoCompleteExample>
+      <Button variant="contained">My Button</Button>
     </div>
   );
 }
