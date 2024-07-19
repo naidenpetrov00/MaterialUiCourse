@@ -1,39 +1,37 @@
-import { Button } from "@mui/material";
+import { Avatar } from "@mui/material";
 import { styled } from "@mui/material/styles";
 
-export const MyStyledButton = styled(Button)({
-  fontSize: { xs: "10px", sm: "20px" },
-  fontStyle: "Roboto",
-  bgcolor: "secondary.main",
-  color: "primary.main",
-  "$:hover": {
-    bgcolor: "primary.main",
-    color: "secondary.main",
+export const MyStyledAvatar = styled(Avatar)(({ theme }) => ({
+  fontFamily: "Roboto",
+  backgroundColor: theme.palette.secondary.main,
+  outline: "solid black",
+  [theme.breakpoints.down("sm")]: {
+    width: "4rem",
+    height: "4rem",
+  },[theme.breakpoints.down("xs")]: {
+    width: "3rem",
+    height: "3rem",
   },
-});
+  "&:hover": { color: "black" },
+}));
 
 function App() {
   return (
     <>
-      <Button
-        variant="contained"
-        size="large"
+      <MyStyledAvatar alt="Mitko">M</MyStyledAvatar>
+      <Avatar
+        alt="Nayden"
         sx={{
-          fontSize: { xs: "10px", sm: "20px" },
-          fontStyle: "Roboto",
+          fontFamily: "Roboto",
           bgcolor: "secondary.main",
-          color: "primary.main",
-          "$:hover": {
-            bgcolor: "primary.main",
-            color: "secondary.main",
-          },
+          outline: "solid black",
+          width: { xs: "4rem", sm: "3rem" },
+          height: { xs: "4rem", sm: "3rem" },
+          "&:hover": { color: "black" },
         }}
       >
-        Submit
-      </Button>
-      <MyStyledButton variant="contained" size="large">
-        StyledSubmit
-      </MyStyledButton>
+        N
+      </Avatar>
     </>
   );
 }

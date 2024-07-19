@@ -4,12 +4,7 @@ import "./index.css";
 import App from "./App";
 import { createTheme, ThemeProvider } from "@mui/material";
 
-const theme = createTheme({
-  palette: {
-    primary: { main: "#1976d2" },
-    secondary: { main: "#dc004e" },
-  },
-});
+const theme = createTheme({ typography: { fontFamily: "Roboto" } });
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
