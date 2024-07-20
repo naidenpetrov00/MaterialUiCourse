@@ -1,7 +1,7 @@
-import { Avatar } from "@mui/material";
+import { Alert } from "@mui/material";
 import { styled } from "@mui/material/styles";
 
-export const MyStyledAvatar = styled(Avatar)(({ theme }) => ({
+export const MyStyledAlert = styled(Alert)(({ theme }) => ({
   fontFamily: "Roboto",
   backgroundColor: theme.palette.secondary.main,
   outline: "solid black",
@@ -18,8 +18,8 @@ export const MyStyledAvatar = styled(Avatar)(({ theme }) => ({
 function App() {
   return (
     <>
-      <MyStyledAvatar alt="Mitko">M</MyStyledAvatar>
-      <Avatar
+      <MyStyledAlert alt="Mitko">M</MyStyledAlert>
+      <Alert
         alt="Nayden"
         sx={{
           fontFamily: "Roboto",
@@ -31,7 +31,7 @@ function App() {
         }}
       >
         N
-      </Avatar>
+      </Alert>
     </>
   );
 }
