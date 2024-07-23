@@ -1,37 +1,37 @@
-import { Alert } from "@mui/material";
+import { Accordion, AccordionSummary, AccordionDetails } from "@mui/material";
 import { styled } from "@mui/material/styles";
 
-export const MyStyledAlert = styled(Alert)(({ theme }) => ({
+export const MyStyledAccordion = styled(Accordion)(({ theme }) => ({
   fontFamily: "Roboto",
-  backgroundColor: theme.palette.secondary.main,
-  outline: "solid black",
-  [theme.breakpoints.down("sm")]: {
-    width: "4rem",
-    height: "4rem",
-  },[theme.breakpoints.down("xs")]: {
-    width: "3rem",
-    height: "3rem",
-  },
-  "&:hover": { color: "black" },
+  maxWidth: { sm: "80vw", lg: "90vw" },
+  [theme.breakpoints.down("sm")]: { maxWidth: "80vw" },
+  [theme.breakpoints.down("lg")]: { maxWidth: "90vw" },
+  bgcolor: "primary.main",
+  "&:hover": { bgcolor: "primary.dark" },
 }));
 
 function App() {
   return (
     <>
-      <MyStyledAlert alt="Mitko">M</MyStyledAlert>
-      <Alert
-        alt="Nayden"
+      <MyStyledAccordion>
+        <AccordionSummary>What is MUI</AccordionSummary>
+        <AccordionDetails sx={{ bgcolor: "secondary.main" }}>
+          MUI is React UI Library
+        </AccordionDetails>
+      </MyStyledAccordion>
+      <Accordion
         sx={{
-          fontFamily: "Roboto",
-          bgcolor: "secondary.main",
-          outline: "solid black",
-          width: { xs: "4rem", sm: "3rem" },
-          height: { xs: "4rem", sm: "3rem" },
-          "&:hover": { color: "black" },
+          fontFamily: "Verdana",
+          bgcolor: "primary.main",
+          maxWidth: { sm: "80vw", lg: "90vw" },
+          "&:hover": { bgcolor: "primary.dark" },
         }}
       >
-        N
-      </Alert>
+        <AccordionSummary>What is MUI</AccordionSummary>
+        <AccordionDetails sx={{ bgcolor: "secondary.main" }}>
+          MUI is React UI Library
+        </AccordionDetails>
+      </Accordion>
     </>
   );
 }
